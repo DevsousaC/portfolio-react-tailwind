@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
@@ -48,8 +48,6 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-slate-900 text-gray-100 font-sans overflow-x-hidden">
-      {}
-
       <main>
         <Hero glitchText={glitchText} currentSkill={currentSkill} />
         <Skills />
@@ -57,6 +55,7 @@ const App = () => {
         <About />
         <Contact />
       </main>
+
       <Footer />
     </div>
   );
