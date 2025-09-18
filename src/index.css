@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* Animações customizadas */
+@keyframes glitch {
+  0%, 100% { 
+    color: #f1f5f9; 
+  }
+  25% { 
+    color: #ef4444; 
+    transform: translateX(2px); 
+  }
+  50% { 
+    color: #22d3ee; 
+    transform: translateX(-2px); 
+  }
+  75% { 
+    color: #e879f9; 
+  }
+}
+
+.animate-glitch {
+  animation: glitch 0.3s ease-in-out;
+}
+
+/* Background patterns customizados */
+.bg-circuit-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(34, 211, 238, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(232, 121, 249, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
